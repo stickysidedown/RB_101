@@ -32,6 +32,10 @@ def operation_to_message(operator)
   end
 end
 
+def valid_answer(answer)
+  ["y", "yes", "n", "no"].include?(answer)
+end
+
 prompt(language('welcome', LANGUAGE))
 
 name = ""
@@ -46,7 +50,8 @@ loop do
   end
 end
 
-prompt("Hi #{name}!")
+pretty_name = name.split(" ")
+prompt("Hi #{pretty_name[0]} #{pretty_name[1]} #{pretty_name[2]}")
 
 # Main Outer Loop
 loop do
@@ -104,18 +109,33 @@ MSG
 
   result =  case operator
             when "1"
-              number1.to_i() + number2.to_i()
+              number1.to_f() + number2.to_f()
             when "2"
-              number1.to_i() - number2.to_i()
+              number1.to_f() - number2.to_f()
             when "3"
-              number1.to_i() * number2.to_i()
+              number1.to_f() * number2.to_f()
             when "4"
-              number1.to_f() / number2.to_f()
+              if number2.to_f != 0.0
+                number1.to_f() / number2.to_f()
+              else
+                prompt("The denominator can not be zero.")
+                prompt("Please enter numbers again.")
+                next
+              end
             end
   # Output
   prompt("The answer is #{result}.")
-  prompt(language('another calculation?', LANGUAGE))
-  answer = Kernel.gets().chomp
-  break unless answer.downcase().start_with?("y")
+  answer = ""
+  loop do
+    prompt(language('another calculation?', LANGUAGE))
+    answer = Kernel.gets().chomp
+
+    if valid_answer(answer) == false
+      prompt("The only valid answers are 'Y', 'N', 'Yes', or 'No' ")
+    else
+      break
+    end
+  end
+  break unless answer.downcase() == "y" || answer.downcase() == "yes"
 end
 prompt(language('thank you', LANGUAGE))
