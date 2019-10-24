@@ -1,0 +1,19 @@
+  welcome: "Welcome to mortgage calculator!" 
+  welcome2: "This calculator will tell you your montly payment with interest."
+  line_break: "------------------"
+  
+  loan_amount?: "What is the total loan amount?"
+  valid_loan_amount?: "Loan amount must be greater than zero."
+  valid_loan_amount_2?: "Loan amount must include numbers only without decimal or currency"
+
+  interest_rate?: "What is the annual interest rate?"
+  valid_rate: "That is a incorrect rate."
+  your_rate: "Your rate is:"
+
+  loan_length?: "Please enter the length of your loan in years. (only enter a whole number)"
+  invalid_loan_length: "That was a invalid entry."
+  example_loan_length: "Example: For a 15yr length, type '15'"
+  
+  the_payment: "Your monthly payment is:"
+  the_end?: 'Would you like to run another scenario? Enter ("Y" or "N")'
+  invalid_answer: 'Invalid reponse: Please enter "Y" or "N" '
