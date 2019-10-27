@@ -1,0 +1,47 @@
+Mortgage calculator
+
+High level input and output
+
+	Input will be:
+		1. Loan amount
+		2. Annual Percentage rate (interest rate)
+		3. Loan duration
+
+	Output will be:
+	1. monthly interest rate
+	2. loan duration in months
+
+Formula for Monthly Payment = 
+m = p * (j / (1 - (1 + j)**(-n)))
+
+m = monthly payment
+p = loan amount
+j = monthly interest rate
+n = loan duration in months
+
+	Rules and edges : 
+	Loan amount will always be a positive integer.
+	APR will be a positive float
+	Duration will be for 5, 15, 30 years
+
+	Test case - 
+Input:	
+Loan amount 100,000
+APR - 5%
+Loan length - 30 years
+
+Output:
+Monthly payment - $536.82
+
+
+if [",", "$", "%", "."].include?($loan_amount.to_i) == true
+       prompt(MESSAGES['valid_loan_amount_2?'])
+
+
+
+
+
+
+
+
+
