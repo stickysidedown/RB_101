@@ -85,7 +85,6 @@ end
 # program
 
 loop do
-  # variables
 
   prompt(MESSAGES['welcome'])
   prompt(MESSAGES['line_break'])
