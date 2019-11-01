@@ -1,0 +1,27 @@
+High Level - 
+Rock paper or scissors?
+
+User enters rock
+computer enters either paper, scissors, or rock.
+
+Output - 
+You win! You lose! based on logic rules.
+
+logic -
+rock > scissors
+rock = rock
+rock < paper
+
+paper > rock
+paper = paper
+paper < scissors
+
+scissors > paper
+scissors = scissors
+scissors < rock
+
+
+edges - 
+Are ties allowed?
+Computer chooses randomly. 
+
