@@ -1,4 +1,5 @@
-VALID_CHOICES = %w(rock paper scissors spock lizard r p s sp l)
+VALID_CHOICES = %w(rock paper scissors spock lizard r p s v l)
+COMPUTER_CHOICES = %w(rock paper scissors spock lizard)
 VALID_EXIT = %w(y yes n no Y Yes N No)
 
 player_score = 0
@@ -10,7 +11,8 @@ intro_text = <<-MSG
 'p' for 'paper'
 's' for 'scissors'
 'l' for 'lizard'
-'sp' for 'spock'"
+'v' for 'spock'"
+=>
 MSG
 
 def blank_line
@@ -19,6 +21,23 @@ end
 
 def prompt(message)
   puts("=> #{message}")
+end
+
+def player_case(player)
+  case player
+  when "r"
+    player = "rock"
+  when "s"
+    player = "scissors"
+  when "v"
+    player = "spock"
+  when "l"
+    player = "lizard"
+  when "p"
+    player = "paper"
+  else
+    player
+  end
 end
 
 def win?(first, second)
@@ -68,20 +87,7 @@ loop do
 
     puts intro_text
 
-    choice = gets.chomp
-
-    case choice.downcase
-    when "r"
-      choice = "rock"
-    when "s"
-      choice = "scissors"
-    when "sp"
-      choice = "spock"
-    when "l"
-      choice = "lizard"
-    when "p"
-      choice = "paper"
-    end
+    choice = gets.chomp.downcase
 
     if VALID_CHOICES.include?(choice)
       break
@@ -90,20 +96,9 @@ loop do
     end
   end
 
-  computer_choice = VALID_CHOICES.sample
+  choice = player_case(choice)
 
-  case computer_choice.downcase
-  when "r"
-    computer_choice = "rock"
-  when "s"
-    computer_choice = "scissors"
-  when "sp"
-    computer_choice = "spock"
-  when "l"
-    computer_choice = "lizard"
-  when "p"
-    computer_choice = "paper"
-  end
+  computer_choice = COMPUTER_CHOICES.sample
 
   display_results(choice, computer_choice)
 
@@ -142,5 +137,3 @@ loop do
 
   break unless answer.downcase == "y" || answer.downcase == "yes"
 end
-
-# clear()

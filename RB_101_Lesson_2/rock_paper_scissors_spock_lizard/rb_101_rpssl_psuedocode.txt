@@ -1,0 +1,88 @@
+High Level - 
+Rock, paper, scissors, spock, lizard ?
+
+User enters rock
+computer enters either paper, scissors, rock, spock, lizard, p s r sp l
+
+"Welcome to Rock, Paper, Scissors, Spock, Lizard"
+
+Pleast type "r" for rock
+Pleast type "p" for paper
+Pleast type "s" for scissors
+Pleast type "l" for lizard
+Pleast type "sp" for spock
+Output - 
+
+hash it. 
+
+
+You win! You lose! based on logic rules.
+Score increase by 1 until 5 is reached
+
+
+
+
+
+
+Score keeping:
+Store score in separate player and computer variables.
+
+Add one to whoever wins.
+
+Display score
+
+When either score reaches 5 the game ends.
+
+The winner is the player who has 5.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+logic -
+rock > scissors
+rock > lizard
+rock = rock
+rock < paper
+rock < spock
+
+paper > rock
+paper > spock
+paper = paper
+paper < lizard
+paper < scissors
+
+scissors > paper
+scissors > lizard
+scissors = scissors
+scissors < rock
+scissors < spock
+
+spock > scissors
+spock > rock
+spock = spock
+spock < paper
+spock < lizard
+
+lizard > spock
+lizard > paper
+lizard = lizard
+lizard < scissors
+lizard < rock
+
+
+
+
+edges - 
+Are ties allowed?
+Computer chooses randomly. 
+
