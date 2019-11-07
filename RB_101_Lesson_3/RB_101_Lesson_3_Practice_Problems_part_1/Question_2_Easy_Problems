@@ -1,0 +1,19 @@
+Question 2: Easy Problems
+Describe the difference between ! and ? in Ruby. And explain what would happen in the following scenarios:
+
+what is != and where should you use it?
+	A "not equal comparison" Use it when you want to set a condition that is not equal to something.
+
+2. put ! before something, like !user_name.
+	This will give the boolean opposite.
+
+3. put ! after something, like words.uniq!
+	Generally but not always mutates the caller
+
+4. put ? before something
+
+5. put ? after something
+	If x is ? (true or false) then ....
+
+6. put !! before something, like !!user_name
+	Diplays whether the variable is true or false

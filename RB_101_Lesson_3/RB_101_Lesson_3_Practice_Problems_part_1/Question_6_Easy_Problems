@@ -1,0 +1,14 @@
+famous_words = "seven years ago..."
+
+# show two different ways to put the expected "Four score and " in front of it.
+
+variable = "Four score and "
+
+Full sentence = "#{variable}#{famous_words}"
+
+"Four score and " << famous_words
+
+"Four score and " + famous_words
+
+famous_words.prepend("Four scour and ")
+# this is mutating
